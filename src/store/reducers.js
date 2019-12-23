@@ -1,4 +1,7 @@
+/** @format */
+
 import { ADD_PRODUCT_TO_CART, REMOVE_PRODUCT_FROM_CART } from './actions';
+import { toast } from 'react-toastify';
 
 const initialState = {
   products: [
@@ -12,6 +15,19 @@ const initialState = {
 };
 
 const shopReducer = (state = initialState, action) => {
+  // const options = {
+  //   onOpen: props => console.log('open'),
+  //   onClose: props => console.log('close'),
+  //   autoClose: 6000,
+  //   // closeButton: <FontAwesomeCloseButton />,
+  //   type: toast.TYPE.INFO,
+  //   hideProgressBar: false,
+  //   position: toast.POSITION.TOP_RIGHT,
+  //   pauseOnHover: true,
+  //   // transition: MyCustomTransition,
+  //   progress: 0.2
+  //   // and so on ...
+  // };
   let updatedCart;
   let updatedItemIndex;
   switch (action.type) {
@@ -30,11 +46,12 @@ const shopReducer = (state = initialState, action) => {
         updatedItem.quantity++;
         updatedCart[updatedItemIndex] = updatedItem;
       }
+      toast.success(`Added Product: ${action.payload.title}`);
       return { ...state, cart: updatedCart };
     case REMOVE_PRODUCT_FROM_CART:
       updatedCart = [...state.cart];
       updatedItemIndex = updatedCart.findIndex(
-        item => item.id === action.payload
+        item => item.id === action.payload.id
       );
 
       const updatedItem = {
@@ -46,7 +63,7 @@ const shopReducer = (state = initialState, action) => {
       } else {
         updatedCart[updatedItemIndex] = updatedItem;
       }
-
+      toast.error(`Removed Product: ${action.payload.title}`);
       return { ...state, cart: updatedCart };
     default:
       return state;
