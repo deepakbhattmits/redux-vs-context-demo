@@ -1,6 +1,6 @@
 /** @format */
-
-import { ADD_PRODUCT_TO_CART, REMOVE_PRODUCT_FROM_CART } from './actions';
+import { shopConstants } from '../constants/type';
+// import { ADD_PRODUCT_TO_CART, REMOVE_PRODUCT_FROM_CART } from './actions';
 import { toast } from 'react-toastify';
 
 const initialState = {
@@ -31,7 +31,7 @@ const shopReducer = (state = initialState, action) => {
   let updatedCart;
   let updatedItemIndex;
   switch (action.type) {
-    case ADD_PRODUCT_TO_CART:
+    case shopConstants.ADD_PRODUCT_TO_CART:
       updatedCart = [...state.cart];
       updatedItemIndex = updatedCart.findIndex(
         item => item.id === action.payload.id
@@ -43,12 +43,12 @@ const shopReducer = (state = initialState, action) => {
         const updatedItem = {
           ...updatedCart[updatedItemIndex]
         };
-        updatedItem.quantity++;
+        updatedItem.quantity += 1;
         updatedCart[updatedItemIndex] = updatedItem;
       }
       toast.success(`Added Product: ${action.payload.title}`);
       return { ...state, cart: updatedCart };
-    case REMOVE_PRODUCT_FROM_CART:
+    case shopConstants.REMOVE_PRODUCT_FROM_CART:
       updatedCart = [...state.cart];
       updatedItemIndex = updatedCart.findIndex(
         item => item.id === action.payload.id
@@ -57,7 +57,7 @@ const shopReducer = (state = initialState, action) => {
       const updatedItem = {
         ...updatedCart[updatedItemIndex]
       };
-      updatedItem.quantity--;
+      updatedItem.quantity -= 1;
       if (updatedItem.quantity <= 0) {
         updatedCart.splice(updatedItemIndex, 1);
       } else {
