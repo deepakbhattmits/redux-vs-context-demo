@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
@@ -10,7 +12,7 @@ class CartPage extends Component {
     return (
       <React.Fragment>
         <MainNavigation cartItemNumber={this.props.cartItemCount} />
-        <main className="cart">
+        <main className='cart'>
           {this.props.cartItems.length <= 0 && <p>No Item in the Cart!</p>}
           <ul>
             {this.props.cartItems.map(cartItem => (
@@ -23,7 +25,8 @@ class CartPage extends Component {
                   <button
                     onClick={this.props.removeProductFromCart.bind(
                       this,
-                      cartItem.id
+                      cartItem.id,
+                      cartItem.title
                     )}
                   >
                     Remove from Cart
@@ -49,11 +52,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    removeProductFromCart: id => dispatch(removeProductFromCart(id))
+    removeProductFromCart: (id, title) =>
+      dispatch(removeProductFromCart(id, title))
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CartPage);
+export default connect(mapStateToProps, mapDispatchToProps)(CartPage);
