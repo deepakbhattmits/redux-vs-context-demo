@@ -11,13 +11,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <ToastContainer autoClose={2000} />
-      <Switch>
-        <Route path='/' component={ProductsPage} exact />
-        <Route path='/cart' component={CartPage} exact />
-      </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/' component={ProductsPage} exact />
+          <Route path='/cart' component={CartPage} exact />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 };
 
