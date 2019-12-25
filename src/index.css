@@ -1,3 +1,5 @@
+/** @format */
+
 * {
   box-sizing: border-box;
 }
@@ -7,14 +9,15 @@ body {
   font-family: sans-serif;
 }
 
-
 button {
   font: inherit;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 0.25rem;
   background: #00179b;
   color: white;
   border: none;
   cursor: pointer;
+  transition: ease-in 0.4s;
 }
 
 button:focus {
@@ -24,4 +27,7 @@ button:focus {
 button:hover,
 button:active {
   background: #df6d02;
+  box-shadow: 0 0 10px #000;
+  color: #000;
+  transform: scale(1.2);
 }
