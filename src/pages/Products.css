@@ -1,3 +1,5 @@
+/** @format */
+
 .products {
   width: 50rem;
   max-width: 90%;
@@ -8,14 +10,21 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  width: 100%;
 }
 
 .products li {
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 0 1rem;
   border: 1px solid #00179b;
-  display: flex;
+  display: grid;
+  width: calc(100% / 4);
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
-
+.products li img {
+  width: 150px;
+  height: 150px;
+}
