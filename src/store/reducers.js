@@ -19,14 +19,13 @@ const shopReducer = (state = initialState, action) => {
   //   onOpen: props => console.log('open'),
   //   onClose: props => console.log('close'),
   //   autoClose: 6000,
-  //   // closeButton: <FontAwesomeCloseButton />,
+  //   closeButton: <FontAwesomeCloseButton />,
   //   type: toast.TYPE.INFO,
   //   hideProgressBar: false,
   //   position: toast.POSITION.TOP_RIGHT,
   //   pauseOnHover: true,
-  //   // transition: MyCustomTransition,
+  //   transition: MyCustomTransition,
   //   progress: 0.2
-  //   // and so on ...
   // };
   let updatedCart;
   let updatedItemIndex;
