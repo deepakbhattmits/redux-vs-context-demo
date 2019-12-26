@@ -1,9 +1,13 @@
 /** @format */
 
 .products {
-  width: 50rem;
+  /* width: 50rem;
   max-width: 90%;
-  margin: 2rem auto;
+  margin: 2rem auto; */
+
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
 }
 
 .products ul {
@@ -18,13 +22,17 @@
   padding: 1rem;
   margin: 0 1rem;
   border: 1px solid #00179b;
-  display: grid;
   width: calc(100% / 4);
+  /* display: grid;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   text-align: center;
 }
 .products li img {
   width: 150px;
   height: 150px;
+}
+.products li div {
+  margin: 0.25rem auto;
+  word-break: break-all;
 }
