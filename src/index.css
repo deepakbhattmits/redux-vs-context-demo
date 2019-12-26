@@ -31,3 +31,28 @@ button:active {
   color: #000;
   transform: scale(1.2);
 }
+body {
+  height: 100vh;
+}
+.header {
+  height: 4.5rem;
+}
+main {
+  height: calc(100vh - 9rem);
+}
+.footer {
+  height: 4.5rem;
+}
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-found .link {
+  padding: 0.25rem 0.55rem;
+  border-radius: 0.125rem;
+  text-decoration: none;
+}
+.not-found-content {
+  text-align: center;
+}
