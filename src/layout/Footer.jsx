@@ -7,6 +7,7 @@ import ShopContext from '../context/shop-context';
 
 import MainNavigation from '../components/MainNavigation';
 const Footer = props => {
+  // console.log(props)
   const context = useContext(ShopContext);
   return (
     <div className='footer'>
