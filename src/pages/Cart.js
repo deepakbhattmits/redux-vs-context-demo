@@ -1,26 +1,15 @@
 /** @format */
 
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 // import { connect } from 'react-redux';
 
 import ShopContext from '../context/shop-context';
-
-import MainNavigation from '../components/MainNavigation';
-// import { removeProductFromCart } from '../store/actions';
 import './Cart.css';
 
 const CartPage = props => {
   const context = useContext(ShopContext);
-  useEffect(() => {
-    console.log(context);
-  }, []);
   return (
     <>
-      <MainNavigation
-        cartItemNumber={context.cart.reduce((count, curItem) => {
-          return count + curItem.quantity;
-        }, 0)}
-      />
       <main className='cart'>
         {context.cart.length <= 0 && <p>No Item in the Cart!</p>}
         <ul>
@@ -48,21 +37,5 @@ const CartPage = props => {
     </>
   );
 };
-// const mapStateToProps = state => {
-//   return {
-//     cartItems: state.cart,
-//     cartItemCount: state.cart.reduce((count, curItem) => {
-//       return count + curItem.quantity;
-//     }, 0)
-//   };
-// };
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     removeProductFromCart: (id, title) =>
-//       dispatch(removeProductFromCart(id, title))
-//   };
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(CartPage);
 export default CartPage;
