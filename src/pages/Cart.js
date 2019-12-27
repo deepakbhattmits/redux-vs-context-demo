@@ -7,6 +7,7 @@ import ShopContext from '../context/shop-context';
 import './Cart.css';
 
 const CartPage = props => {
+	// console.log(props)
 	const context = useContext(ShopContext);
 	return (
 		<>
