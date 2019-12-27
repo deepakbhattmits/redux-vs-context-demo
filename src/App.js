@@ -11,20 +11,21 @@ import GlobalState from './context/GlobalState';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 const App = props => {
-  return (
-    <GlobalState>
-      <ToastContainer autoClose={2000} />
-      <BrowserRouter>
-        <Layout>
-          <Switch>
-            <Route path='/' component={ProductsPage} exact />
-            <Route path='/cart' component={CartPage} exact />
-            <Route path='*' component={NotFound} exact />
-          </Switch>
-        </Layout>
-      </BrowserRouter>
-    </GlobalState>
-  );
+	// console.log(props)
+	return (
+		<GlobalState>
+			<ToastContainer autoClose={2000} />
+			<BrowserRouter>
+				<Layout>
+					<Switch>
+						<Route path='/' component={ProductsPage} exact />
+						<Route path='/cart' component={CartPage} exact />
+						<Route path='*' component={NotFound} exact />
+					</Switch>
+				</Layout>
+			</BrowserRouter>
+		</GlobalState>
+	);
 };
 
 export default App;
