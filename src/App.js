@@ -11,7 +11,7 @@ import GlobalState from './context/GlobalState';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 const App = props => {
-	// console.log(props)
+	// console.log('test :',props)
 	return (
 		<GlobalState>
 			<ToastContainer autoClose={2000} />
