@@ -7,7 +7,7 @@ import ShopContext from '../context/shop-context';
 
 import MainNavigation from '../components/MainNavigation';
 const Header = props => {
-	// console.log('TEST :',props)
+	// console.log('props :',props)
 	const context = useContext(ShopContext);
 	return (
 		<div className='header'>
