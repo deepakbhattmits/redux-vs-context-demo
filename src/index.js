@@ -12,11 +12,12 @@ import shopReducer from './store/reducers';
 
 const store = createStore(shopReducer, applyMiddleware(reduxThunk));
 const rootElement = document.querySelector('#root');
+// console.log('test : ', rootElement);
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  rootElement
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	rootElement
 );
 
 // If you want your app to work offline and load faster, you can change
