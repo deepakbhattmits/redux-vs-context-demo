@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const NotFound = props => {
-	// console.log('TEST props : ', props.match.url);
+	// console.log('TEST props: ', props.match.url);
 	return (
 		<main className='not-found'>
 			<div className='not-found-content'>
