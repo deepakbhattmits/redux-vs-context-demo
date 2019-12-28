@@ -4,7 +4,7 @@ import { shopConstants } from '../constants/type';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const addProductToCart = (product, state) => {
-	// console.log('TEST : ', product);
+	// console.log('product : ', product);
 	const updatedCart = [...state.cart];
 	const updatedItemIndex = updatedCart.findIndex(
 		item => item.id === product.id
@@ -23,7 +23,7 @@ const addProductToCart = (product, state) => {
 	return { ...state, cart: updatedCart };
 };
 const removeProductFromCart = (productId, state) => {
-	// console.log('TEST Removing ProductId ', productId);
+	// console.log('Removing ProductId ', productId);
 	const updatedCart = [...state.cart];
 	const updatedItemIndex = updatedCart.findIndex(item => item.id === productId);
 	const updatedItemTitle = updatedCart.find(item => item.id === productId);
