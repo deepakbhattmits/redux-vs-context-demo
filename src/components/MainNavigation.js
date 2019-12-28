@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import './MainNavigation.css';
 
 const mainNavigation = props => (
-	// console.log(props)
+	// console.log('test : ',props)
 	<header className='main-navigation'>
 		<nav>
 			<ul>
