@@ -5,7 +5,7 @@ import ShopContext from '../context/shop-context';
 import './Products.css';
 
 const ProductsPage = props => {
-	// console.log('TEST props : ', props);
+	// console.log('props : ', props);
 	return (
 		<ShopContext.Consumer>
 			{context => (
