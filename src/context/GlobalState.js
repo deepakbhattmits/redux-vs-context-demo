@@ -17,7 +17,7 @@ const GlobalState = props => {
 	const [state, dispatch] = useReducer(shopReducer, { cart: [] });
 	// const [cartSum, setCartSum] = useState(0);
 	const addProductToCart = product => {
-		// // console.log('Adding Product ', product);
+		// // console.log('test Adding Product ', product);
 
 		// const updatedCart = [...cart];
 		// const updatedItemIndex = updatedCart.findIndex(
