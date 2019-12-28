@@ -31,7 +31,7 @@ const shopReducer = (state = initialState, action) => {
 	let updatedItemIndex;
 	switch (action.type) {
 		case shopConstants.ADD_PRODUCT_TO_CART:
-			// console.log(action.type)
+			// console.log('action type : ',action.type)
 			updatedCart = [...state.cart];
 			updatedItemIndex = updatedCart.findIndex(
 				item => item.id === action.payload.id
