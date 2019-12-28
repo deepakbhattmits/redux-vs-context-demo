@@ -50,7 +50,7 @@ main {
 }
 .not-found .link {
 	padding: 0.25rem 0.55rem;
-	border-radius: 0.125rem;
+	border-radius: 0.15rem;
 	text-decoration: none;
 }
 .not-found-content {
