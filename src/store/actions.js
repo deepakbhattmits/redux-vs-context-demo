@@ -3,7 +3,7 @@
 import { shopConstants } from '../constants/type';
 
 export const addProductToCart = product => {
-	// console.log(product)
+	// console.log('test :',product)
 	return dispatch => {
 		setTimeout(() => {
 			dispatch({
